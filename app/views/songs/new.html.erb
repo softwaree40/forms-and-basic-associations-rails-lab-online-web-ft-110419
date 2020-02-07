@@ -13,6 +13,10 @@
   <option><%= g.name %></option>
   <%end%>
   </datalist> 
+  <%=f.fields for :notes do |n| %><br>
+  <%=f.label :content %><br>
+  <%=n.text_field :content %>
+  <%end%>
   <%= f.submit %>
   <% end %>
 
