@@ -10,7 +10,7 @@
   <%= f.text_field :genre_id, list: "all_genre" %>
   <datalist id="all_genre">
   <%Genre.all.each do |g| %>
-  <option><%= g.name %></option>
+  <option value="<%=g.id%>"> <%= g.name %></option>
   <%end%>
   </datalist> 
   <%=f.fields_for :notes do |n| %><br>
