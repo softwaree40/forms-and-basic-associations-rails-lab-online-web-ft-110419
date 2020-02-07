@@ -6,8 +6,14 @@
   <%= f.label :artist_name %>
   <%= f.text_field :artist_name %>
   <br/>
-
+  <%= f.label :genre_id %>
+  <%= f.text_field :genre_id, list: "all_genre" %>
+  <datalist id="all_genre">
+   <%Genre.all.each do |g| %>
+  <option><%= g.name %></option>
+  <%end%>
+  </datalist> 
   <%= f.submit %>
-<% end %>
+  <% end %>
 
 
